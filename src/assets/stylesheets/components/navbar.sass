@@ -1,6 +1,51 @@
 .navbar
-  min-height: $m-base * 2
+  display: flex
+  justify-content: flex-end
+  margin: $m-lg
+  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+    margin: $m-md
 
-+media-breakpoint-up(md)
-  .navbar
-    min-height: $m-base * 3
+  &__section
+    display: flex
+    align-items: center
+
+    &.-main
+      flex-grow: 1
+
+    &.-desktop-only
+      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+        display: none
+
+  &__logo-text
+    margin-left: $m-sm
+    color: $color-white
+    font-weight: $font-weight-bold
+    font-size: $font-size-lg
+
+  &__logo-icon
+    height: 40px
+
+  &__avatar
+    +btn-reset
+    box-sizing: content-box
+    height: 40px
+    border-radius: 50%
+    border: 3px solid $color-light-transparent
+    margin: 0 0 0 $m-md
+
+  &__section
+    display: flex
+
+  &__item
+    +btn-reset
+    margin: 0 $m-sm
+    color: $color-white
+    white-space: nowrap
+    padding: $m-sm
+
+    &.-btn
+      min-width: 130px
+
+    &.-primary
+      border: 2px solid $color-light-transparent
+      border-radius: $border-radius-md
