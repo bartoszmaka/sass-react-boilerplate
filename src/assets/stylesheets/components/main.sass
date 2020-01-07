@@ -1,0 +1,108 @@
+.main
+  margin-top: $m-xxl
+  margin-left: $m-xxxl
+  margin-right: $m-xxxl
+  color: $color-white
+  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+    margin-left: $m-base
+    margin-right: $m-base
+
+  &__pre-header
+    font-size: $font-size-sm
+
+    border-bottom: solid $color-light-transparent 3px
+    padding-bottom: $m-sm
+    margin-bottom: $m-lg
+    text-transform: uppercase
+    letter-spacing: 2px
+
+    &.-active
+      border-bottom: solid $color-white 3px
+
+  &__header
+    font-size: $font-size-xxl
+
+  &__description
+    font-size: $font-size-xl
+    font-weight: $font-weight-bold
+    margin-right: $m-base
+    
+  &__details
+    border-left: solid $color-white 3px
+    margin: $m-lg 0
+
+    p
+      margin: $m-md $m-base
+
+  &__button
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: $color-white
+    background-color: $color-light-transparent
+    border: none
+    margin: 0
+    padding: 0
+
+    &-content
+      padding: $m-sm $m-base
+      font-size: $font-size-sm
+
+    &-icon
+      color: $brand-primary
+      background-color: $color-white
+      padding: $m-sm
+
+
+  &__search
+    font-size: $font-size-sm
+    margin-top: $m-xxxl
+    display: flex
+    color: $color-black
+    flex-wrap: nowrap
+    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+      flex-wrap: wrap
+    
+    &-icon
+      background-color: $color-light-transparent
+      flex-basis: 10% // no idea how to make its width equal to height other than magic number
+      display: flex
+      align-items: center
+      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+        display: none
+
+      img
+        margin: auto
+        height: $m-lg
+        opacity: .4
+
+
+    &-item
+      font-size: $font-size-xs
+      background-color: $color-white
+      flex-basis: 50%
+      flex-grow: 1
+      color: $color-gray-dark
+      padding: $m-base $m-md
+
+      .selection
+        font-size: $font-size-base
+        font-weight: $font-weight-bold
+        color: $color-black
+
+        img
+          display: inline-block
+          height: $font-size-xs
+          margin-left: $m-xs
+
+    &-button
+      border: 0
+      flex-basis: 25%
+      flex-grow: 1
+      color: $color-white
+      background-color: $brand-primary
+      font-size: $font-size-lg
+      font-weight: $font-weight-bold
+      padding: $m-md
+      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+        margin-top: $m-sm
