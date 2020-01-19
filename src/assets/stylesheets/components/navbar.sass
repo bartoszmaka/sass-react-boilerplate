@@ -1,9 +1,13 @@
 .navbar
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
   display: flex
   justify-content: flex-end
-  margin: $m-lg
+  padding: $m-lg
   @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-    margin: $m-md
+    padding: $m-md
 
   &__section
     display: flex

@@ -1,15 +1,18 @@
 .main
-  margin-top: $m-xxl
-  margin-left: $m-xxxl
-  margin-right: $m-xxxl
+  min-height: 100vh
+  padding-top: 140px
+  padding-left: $m-xxxl
+  padding-right: $m-xxxl
   color: $color-white
+  background-image: linear-gradient(to bottom, $color-full-transparent 66%, $color-white), url('../../assets/images/backgrounds/beach.jpg')
+  background-size: cover
   @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-    margin-left: $m-base
-    margin-right: $m-base
+    padding-left: $m-base
+    padding-right: $m-base
 
   &__pre-header
+    position: relative
     font-size: $font-size-sm
-
     border-bottom: solid $color-light-transparent 3px
     padding-bottom: $m-sm
     margin-bottom: $m-lg
@@ -18,6 +21,30 @@
 
     &.-active
       border-bottom: solid $color-white 3px
+  
+  &__tab
+    position: absolute
+    top: 30px
+    right: 0
+    display: flex
+    justify-content: space-between
+    width: 160px
+    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+      display: none
+
+    &-item
+      background-color: $color-light-transparent
+      min-height: 100px
+      flex-basis: 50px
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      color: $color-black
+      font-size: $font-size-lg
+      font-weight: $font-weight-bold
+
+    &.-active
 
   &__header
     font-size: $font-size-xxl

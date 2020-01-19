@@ -8,6 +8,17 @@ const Main = () => {
     <div className="main">
       <div className="main__pre-header">
         <span className="main__pre-header -active">Fly With Us To</span>
+        <div className="main__tab">
+          <div className="main__tab-item -active">
+            <span>01</span>
+            </div>
+          <div className="main__tab-item">
+            <span>02</span>
+          </div>
+          <div className="main__tab-item">
+            <span>03</span>
+            </div>
+        </div>
       </div>
 
       <h2 className="main__header">Bangkok</h2>

@@ -1,0 +1,58 @@
+.experience 
+  min-height: 100vh
+  padding-top: $m-xxl
+  padding-left: $m-xxxl
+  padding-right: $m-xxxl
+  // background-color: $color-white
+  background: linear-gradient($color-white 0%, $color-gray-light 100%)
+  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+    padding-left: $m-base
+    padding-right: $m-base
+
+  &__separator
+    background-color: $brand-primary
+    height: $m-xs
+    width: 80px
+    border-radius: $m-sm
+    margin: $m-sm 0
+
+  &__header
+    font-size: $font-size-sm
+    color: $color-gray-light
+    margin-bottom: $m-xl
+
+    &-main
+      margin-bottom: $m-sm
+      color: $color-black
+
+    &-muted
+      color: $color-gray-light
+      padding-bottom: $m-md
+      border-bottom: solid $color-gray-light 1px
+
+  &__card
+    margin: $m-base 0
+    background-color: $color-white
+    color: $color-gray-light
+    font-size: $font-size-xs
+    p
+      margin-bottom: 0
+
+    &-container
+      padding: $m-base
+
+    &-content
+      text-transform: uppercase
+      letter-spacing: 1.5px
+
+    &-image
+
+    &-separator
+      border-bottom: solid $color-gray-light 1px
+      width: 80px
+      margin: $m-sm 0
+
+    &-title
+      font-size: $font-size-xl
+      color: $color-black
+      font-weight: $font-weight-bold
