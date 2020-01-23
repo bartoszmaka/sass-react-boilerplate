@@ -1,4 +1,5 @@
 import React from 'react';
+import Play from './Icons/Play.svg';
 
 const Experience = () => {
   const cards = [
@@ -13,9 +14,9 @@ const Experience = () => {
       <div className="experience__header">
         <h2 className="experience__header-main">The Zadbos Experience</h2>
         <p className="experience__header-muted">Whether it's your first flight or simply your latest, we work to anticipate your every need</p>
-        <div>
-          <img src="" alt="" />
-          <span><span>This Is Play Icon</span>Watch the full video now</span>
+        <div className="experience__header-video">
+          <img src={Play} alt="" />
+          <span>Watch the full video now</span>
         </div>
       </div>
 

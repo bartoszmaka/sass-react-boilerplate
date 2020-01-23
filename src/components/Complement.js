@@ -1,13 +1,19 @@
 import React from 'react';
+import Play from './Icons/Play.svg';
+import ArrowRight from './Icons/ArrowRight.svg';
+import Dot from './Icons/Dot.svg';
+import Brand from './Icons/Brand.svg';
+import Hamburger from './Icons/Hamburger.svg';
+import Plane from './Icons/Plane.svg';
 
 const Complement = () => {
   const circles = [
-    { icon: '', text: 'Manage Booking' },
-    { icon: '', text: 'Excess baggage' },
-    { icon: '', text: 'Paid Lounge Access' },
-    { icon: '', text: 'Oryx Airport Hotel' },
-    { icon: '', text: 'Al Maha Services' },
-    { icon: '', text: 'Car Rentals' },
+    { icon: Play, text: 'Manage Booking' },
+    { icon: Plane, text: 'Excess baggage' },
+    { icon: Dot, text: 'Paid Lounge Access' },
+    { icon: ArrowRight, text: 'Oryx Airport Hotel' },
+    { icon: Hamburger, text: 'Al Maha Services' },
+    { icon: Brand, text: 'Car Rentals' },
   ]
   return (
     <div className="complement">
