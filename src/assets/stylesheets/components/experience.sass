@@ -1,8 +1,5 @@
 .experience 
-  min-height: 100vh
-  padding-top: $m-xxl
-  padding-left: $m-xxxl
-  padding-right: $m-xxxl
+  padding: $m-xxxl
   // background-color: $color-white
   background: linear-gradient($color-white 0%, $color-gray-light 100%)
   @media screen and (max-width: map-get($grid-breakpoints, "xl"))
@@ -14,11 +11,11 @@
     height: $m-xs
     width: 80px
     border-radius: $m-sm
-    margin: $m-sm 0
+    margin: $m-lg 0
 
   &__header
     font-size: $font-size-sm
-    color: $color-gray-light
+    color: $color-gray-md
     margin-bottom: $m-xl
 
     &-main
@@ -26,14 +23,14 @@
       color: $color-black
 
     &-muted
-      color: $color-gray-light
+      color: $color-gray-md
       padding-bottom: $m-md
       border-bottom: solid $color-gray-light 1px
 
   &__card
     margin: $m-base 0
     background-color: $color-white
-    color: $color-gray-light
+    color: $color-gray-md
     font-size: $font-size-xs
     p
       margin-bottom: 0
@@ -48,7 +45,7 @@
     &-image
 
     &-separator
-      border-bottom: solid $color-gray-light 1px
+      border-bottom: solid $color-gray-md 1px
       width: 80px
       margin: $m-sm 0
 

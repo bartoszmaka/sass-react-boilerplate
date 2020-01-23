@@ -2,6 +2,7 @@ import React from 'react';
 import ExpandDown from './Icons/ExpandDown.svg';
 import Plane from './Icons/Plane.svg';
 import ArrowRight from './Icons/ArrowRight.svg';
+import Dot from './Icons/Dot.svg';
 
 const Main = () => {
   return (
@@ -11,12 +12,15 @@ const Main = () => {
         <div className="main__tab">
           <div className="main__tab-item -active">
             <span>01</span>
-            </div>
+            <img src={Dot} alt=''/>
+          </div>
           <div className="main__tab-item">
             <span>02</span>
+            <img src={Dot} alt=''/>
           </div>
           <div className="main__tab-item">
             <span>03</span>
+            <img src={Dot} alt=''/>
             </div>
         </div>
       </div>

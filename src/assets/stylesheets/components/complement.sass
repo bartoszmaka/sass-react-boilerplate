@@ -1,0 +1,47 @@
+.complement
+  padding: $m-sm $m-xxxl
+  background-color: $color-gray-light
+  text-align: center
+  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+    padding-left: $m-base
+    padding-right: $m-base
+
+  &__separator
+    background-color: $brand-primary
+    height: $m-xs
+    width: 80px
+    border-radius: $m-sm
+    margin: $m-lg auto 
+
+  &__header
+    color: $color-black
+    font-size: $font-size-xl
+
+  &__subheader
+    font-size: $font-size-sm
+
+  &__circle
+    &-container
+      display: flex
+      flex-wrap: wrap
+
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      flex-basis: 33%
+      margin: $m-lg 0 
+      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+        flex-basis: 50%
+
+    &-icon
+      background-color: $color-white
+      border-radius: 50%
+      width: 75px
+      height: 75px
+      margin: $m-base
+      box-shadow: $color-gray 0 10px 10px 5px
+
+    &-content
+      font-size: $font-size-sm
+      color: $color-gray-dark
