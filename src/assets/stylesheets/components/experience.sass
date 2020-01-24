@@ -1,10 +1,15 @@
 .experience 
-  padding: $m-xxxl
-  // background-color: $color-white
+  padding: $m-xxxl $m-base
   background: linear-gradient($color-white 0%, $color-gray-light 100%)
-  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-    padding-left: $m-base
-    padding-right: $m-base
+  @media screen and (min-width: map-get($grid-breakpoints, "xl"))
+    padding: $m-xxxl
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+  @media screen and (min-width: map-get($grid-breakpoints, "xl"))
+    div:nth-child(1)
+      grid-row-start: 1
+      grid-row-end: 3
 
   &__separator
     background-color: $brand-primary
@@ -36,14 +41,52 @@
         margin: $m-sm $m-sm $m-sm 0
 
   &__card
+    display: flex
+    flex-direction: column
     margin: $m-base 0
     background-color: $color-white
     color: $color-gray-md
     font-size: $font-size-xs
+    @media screen and (min-width: map-get($grid-breakpoints, "xl"))
+      margin: $m-sm
     p
       margin-bottom: 0
 
+    @media screen and (min-width: map-get($grid-breakpoints, "xl"))
+      &:nth-child(3)
+        position: relative
+        top: $m-base
+        right: -$m-lg
+
+      &:nth-child(4)
+        grid-column-start: 3
+        grid-row-start: 1
+        grid-row-end: 3
+        z-index: $z-low
+        box-shadow: rgba($brand-primary, .1) 0 20px 30px 1px
+
+        .experience__card-expanded
+          display: block
+
+        .experience__card-image > img
+          height: unset
+
+        div:nth-child(1)
+          position: relative
+
+          &:after
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            background: linear-gradient(45deg, $brand-primary, $color-white)
+            opacity: .75
+
+
     &-container
+      flex: 0 1 100px
       padding: $m-base
 
     &-content
@@ -51,6 +94,27 @@
       letter-spacing: 1.5px
 
     &-image
+      flex-grow: 1
+      display: flex
+
+      & > img
+        object-fit: cover
+        height: 250px
+        width: 400px
+        @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+          height: 150px
+
+    &-expanded
+      display: none
+      color: $color-white
+      position: absolute
+      bottom: 0
+      padding: $m-xl $m-xxxl $m-xl $m-xl
+      font-size: $font-size-lg
+      z-index: $z-middle
+
+      img
+        margin-bottom: $m-base
 
     &-separator
       border-bottom: solid $color-gray-md 1px
