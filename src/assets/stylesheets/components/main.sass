@@ -15,7 +15,8 @@
     padding-bottom: $m-sm
     margin-bottom: $m-lg
     text-transform: uppercase
-    letter-spacing: 2px
+    letter-spacing: $spacing-wide
+    font-weight: $font-weight-bold
 
     &.-active
       border-bottom: solid $color-white 2px
@@ -62,7 +63,7 @@
       &.-active
         border-top: solid $border-size-base rgba($brand-primary, .7)
         color: $color-black
-        opacity: .9
+        opacity: .6
 
         img
           box-shadow: $brand-primary 0 3px 5px 0
@@ -76,14 +77,16 @@
           opacity: 1
 
   &__header
-    font-size: $font-size-xxxl
+    font-size: $font-size-xxxxxl
     @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      font-size: $font-size-xxl
+      font-size: $font-size-xxxxl
 
   &__description
-    font-size: $font-size-xl
+    font-size: $font-size-xxl
     font-weight: $font-weight-bold
     margin-right: $m-base
+    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+      font-size: $font-size-xl
     
   &__details
     border-left: solid $color-white 3px
@@ -99,12 +102,13 @@
     color: $color-white
     background-color: $color-light-transparent
     border: none
-    margin: 0
     padding: 0
+    margin-top: $m-xxl
+    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+      margin: 0
 
     &-content
-      padding: $m-sm $m-base
-      font-size: $font-size-sm
+      padding: $m-sm $m-lg
       font-weight: $font-weight-bold
 
     &-icon
@@ -124,7 +128,7 @@
     
     &-icon
       background-color: $color-light-transparent
-      flex-basis: 10% // no idea how to make its width equal to height other than magic number
+      width: 95px
       display: flex
       align-items: center
       @media screen and (max-width: map-get($grid-breakpoints, "xl"))
@@ -139,7 +143,7 @@
     &-item
       font-size: $font-size-xs
       background-color: $color-white
-      flex-basis: 50%
+      flex-basis: 40%
       flex-grow: 1
       color: $color-gray-dark
       padding: $m-base $m-md
@@ -156,7 +160,7 @@
 
     &-button
       border: 0
-      flex-basis: 25%
+      flex-basis: 20%
       flex-grow: 1
       color: $color-white
       background-color: $brand-primary

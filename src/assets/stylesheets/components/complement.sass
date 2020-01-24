@@ -8,18 +8,27 @@
 
   &__separator
     background-color: $brand-primary
+    border-radius: $m-xs
     height: $m-xs
     width: 80px
-    border-radius: $m-sm
-    margin: $m-lg auto 
+    margin: $m-lg auto
+    @media screen and (min-width: map-get($grid-breakpoints, "xl"))
+      height: $m-sm
+      width: 60px
 
   &__header
     color: $color-black
-    font-size: $font-size-xl
+    font-size: $font-size-xxxl
+    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+      font-size: $font-size-xl
 
   &__subheader
     color: $color-gray-md
-    font-size: $font-size-sm
+    font-size: $font-size-xl
+    padding: 0 30%
+    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
+      font-size: $font-size-sm
+      padding: 0
 
   &__circle
     &-container
