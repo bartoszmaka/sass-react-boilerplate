@@ -33,8 +33,8 @@ const Experience = () => {
         </div>
       </div>
 
-      {cards.map(({ muted, text, image, expanded }) => (
-        <div className="experience__card">
+      {cards.map(({ muted, text, image, expanded }, index) => (
+        <div className="experience__card" key={index}>
           <div className="experience__card-image">
             <img src={image} alt="" />
             <div className="experience__card-expanded">

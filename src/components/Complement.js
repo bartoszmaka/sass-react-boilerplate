@@ -22,8 +22,8 @@ const Complement = () => {
       <p className="complement__subheader">Explore the additional services we offer to make your journey even more memorable.</p>
 
       <div className="complement__circle-container">
-        {circles.map(({ icon, text }) => (
-          <div className="complement__circle-item">
+        {circles.map(({ icon, text }, index) => (
+          <div className="complement__circle-item" key={index}>
             <div className="complement__circle-icon">
               <img src={icon} alt="" />
             </div>
