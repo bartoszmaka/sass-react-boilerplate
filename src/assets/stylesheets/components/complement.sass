@@ -1,6 +1,6 @@
 .complement
   padding: $m-sm $m-xxxl
-  background-color: $color-gray-light
+  background-color: $color-gray-lighter
   text-align: center
   @media screen and (max-width: map-get($grid-breakpoints, "xl"))
     padding-left: $m-base
@@ -18,13 +18,13 @@
 
   &__header
     color: $color-black
-    font-size: $font-size-xxxl
+    font-size: $font-size-2xl
     @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      font-size: $font-size-xl
+      font-size: $font-size-lg
 
   &__subheader
-    color: $color-gray-md
-    font-size: $font-size-xl
+    color: $color-gray-darker
+    font-size: $font-size-lg
     padding: 0 30%
     @media screen and (max-width: map-get($grid-breakpoints, "xl"))
       font-size: $font-size-sm
@@ -60,4 +60,4 @@
 
     &-content
       font-size: $font-size-sm
-      color: $color-gray-dark
+      color: $color-gray-darkest

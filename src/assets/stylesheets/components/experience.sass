@@ -1,6 +1,6 @@
 .experience 
   padding: $m-xxxl $m-base
-  background: linear-gradient($color-white 0%, $color-gray-light 100%)
+  background: linear-gradient($color-white 0%, $color-gray-lighter 100%)
   @media screen and (min-width: map-get($grid-breakpoints, "xl"))
     padding: $m-xxxl
     display: grid
@@ -23,23 +23,23 @@
 
   &__header
     font-size: $font-size-base
-    color: $color-gray-md
+    color: $color-gray-darker
     margin-bottom: $m-xl
 
     &-main
-      font-size: $font-size-xxxl
+      font-size: $font-size-2xl
       margin-bottom: $m-base
       color: $color-black
       word-spacing: 100vw
       @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-        font-size: $font-size-xl
+        font-size: $font-size-lg
         word-spacing: initial
 
     &-muted
-      color: $color-gray-md
-      line-height: $font-size-xxl
+      color: $color-gray-darker
+      line-height: $font-size-xl
       padding-bottom: $m-md
-      border-bottom: solid $color-gray-light 1px
+      border-bottom: solid $color-gray-lighter 1px
       @media screen and (min-width: map-get($grid-breakpoints, "xl"))
         padding: 0 $m-xxl $m-md 0
 
@@ -56,7 +56,7 @@
     flex-direction: column
     margin: $m-base 0
     background-color: $color-white
-    color: $color-gray-md
+    color: $color-gray-darker
     font-size: $font-size-xs
     @media screen and (min-width: map-get($grid-breakpoints, "xl"))
       margin: $m-sm
@@ -127,11 +127,11 @@
         margin-bottom: $m-base
 
     &-separator
-      border-bottom: solid $color-gray-md 1px
+      border-bottom: solid $color-gray-darker 1px
       width: 80px
       margin: $m-sm 0
 
     &-title
-      font-size: $font-size-xl
+      font-size: $font-size-lg
       color: $color-black
       font-weight: $font-weight-bold
