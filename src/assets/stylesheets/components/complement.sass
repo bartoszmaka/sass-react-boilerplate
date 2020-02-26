@@ -1,10 +1,7 @@
 .complement
-  padding: $m-sm $m-3xl
+  padding: $m-sm $m-base
   background-color: $color-gray-lighter
   text-align: center
-  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-    padding-left: $m-base
-    padding-right: $m-base
 
   &__separator
     background-color: $brand-primary
@@ -12,23 +9,15 @@
     height: $m-xs
     width: 80px
     margin: $m-lg auto
-    @media screen and (min-width: map-get($grid-breakpoints, "xl"))
-      height: $m-sm
-      width: 60px
 
   &__header
     color: $color-black
-    font-size: $font-size-2xl
-    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      font-size: $font-size-lg
+    font-size: $font-size-lg
 
   &__subheader
     color: $color-gray-darker
-    font-size: $font-size-lg
-    padding: 0 30%
-    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      font-size: $font-size-sm
-      padding: 0
+    font-size: $font-size-sm
+    padding: 0
 
   &__circle
     &-container
@@ -39,10 +28,8 @@
       display: flex
       flex-direction: column
       align-items: center
-      flex-basis: 33%
-      margin: $m-lg 0 
-      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-        flex-basis: 50%
+      flex-basis: 50%
+      margin: $m-lg 0
 
     &-icon
       background-color: $color-white
@@ -61,3 +48,22 @@
     &-content
       font-size: $font-size-sm
       color: $color-gray-darkest
+
++media-breakpoint-up(xl)
+  .complement
+    padding: $m-sm $m-3xl
+
+    &__separator
+      height: $m-sm
+      width: 60px
+
+    &__header
+      font-size: $font-size-2xl
+
+    &__subheader
+      font-size: $font-size-lg
+      padding: 0 30%
+
+    &__circle
+      &-item
+        flex-basis: 33%

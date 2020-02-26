@@ -1,12 +1,9 @@
 .main
   min-height: 100vh
-  padding: 140px $m-3xl $m-3xl $m-3xl
+  padding: 140px $m-base $m-3xl $m-base
   color: $color-white
   background-image: linear-gradient(to bottom, $color-full-transparent 66%, $color-white), url('../../assets/images/backgrounds/beach.jpg')
   background-size: cover
-  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-    padding-left: $m-base
-    padding-right: $m-base
 
   &__pre-header
     position: relative
@@ -20,16 +17,9 @@
 
     &.-active
       border-bottom: solid $color-white 2px
-  
+
   &__tab
-    position: absolute
-    top: 26px
-    right: 0
-    display: flex
-    justify-content: space-between
-    width: 160px
-    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      display: none
+    display: none
 
     &-item
       position: relative
@@ -77,17 +67,13 @@
           opacity: 1
 
   &__header
-    font-size: $font-size-4xl
-    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      font-size: $font-size-3xl
+    font-size: $font-size-3xl
 
   &__description
-    font-size: $font-size-xl
+    font-size: $font-size-lg
     font-weight: $font-weight-bold
     margin-right: $m-base
-    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      font-size: $font-size-lg
-    
+
   &__details
     border-left: solid $color-white 3px
     margin: $m-lg 0
@@ -103,9 +89,6 @@
     background-color: $color-light-transparent
     border: none
     padding: 0
-    margin-top: $m-2xl
-    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      margin: 0
 
     &-content
       padding: $m-sm $m-lg
@@ -122,17 +105,10 @@
     margin-top: $m-3xl
     display: flex
     color: $color-black
-    flex-wrap: nowrap
-    @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-      flex-wrap: wrap
-    
+    flex-wrap: wrap
+
     &-icon
-      background-color: $color-light-transparent
-      width: 95px
-      display: flex
-      align-items: center
-      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-        display: none
+      display: none
 
       img
         margin: auto
@@ -167,5 +143,37 @@
       font-size: $font-size-lg
       font-weight: $font-weight-bold
       padding: $m-md
-      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-        margin-top: $m-sm
+      margin-top: $m-sm
+
++media-breakpoint-up(xl)
+  .main
+    padding: 140px $m-3xl $m-3xl $m-3xl
+
+    &__tab
+      position: absolute
+      top: 26px
+      right: 0
+      display: flex
+      justify-content: space-between
+      width: 160px
+
+    &__header
+      font-size: $font-size-4xl
+
+    &__description
+      font-size: $font-size-xl
+
+    &__button
+      margin-top: $m-2xl
+
+    &__search
+      flex-wrap: nowrap
+
+      &-icon
+        background-color: $color-light-transparent
+        width: 95px
+        display: flex
+        align-items: center
+
+      &-button
+        margin-top: 0

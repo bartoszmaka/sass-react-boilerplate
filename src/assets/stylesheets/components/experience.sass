@@ -1,15 +1,6 @@
-.experience 
+.experience
   padding: $m-3xl $m-base
   background: linear-gradient($color-white 0%, $color-gray-lighter 100%)
-  @media screen and (min-width: map-get($grid-breakpoints, "xl"))
-    padding: $m-3xl
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-
-  @media screen and (min-width: map-get($grid-breakpoints, "xl"))
-    div:nth-child(1)
-      grid-row-start: 1
-      grid-row-end: 3
 
   &__separator
     background-color: $brand-primary
@@ -17,9 +8,6 @@
     height: $m-xs
     width: 80px
     margin: $m-lg 0
-    @media screen and (min-width: map-get($grid-breakpoints, "xl"))
-      height: $m-sm
-      width: 60px
 
   &__header
     font-size: $font-size-base
@@ -27,21 +15,15 @@
     margin-bottom: $m-xl
 
     &-main
-      font-size: $font-size-2xl
+      font-size: $font-size-lg
       margin-bottom: $m-base
       color: $color-black
-      word-spacing: 100vw
-      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-        font-size: $font-size-lg
-        word-spacing: initial
 
     &-muted
       color: $color-gray-darker
       line-height: $font-size-xl
       padding-bottom: $m-md
       border-bottom: solid $color-gray-lighter 1px
-      @media screen and (min-width: map-get($grid-breakpoints, "xl"))
-        padding: 0 $m-2xl $m-md 0
 
     &-video
       display: flex
@@ -58,12 +40,76 @@
     background-color: $color-white
     color: $color-gray-darker
     font-size: $font-size-xs
-    @media screen and (min-width: map-get($grid-breakpoints, "xl"))
-      margin: $m-sm
+
     p
       margin-bottom: 0
 
-    @media screen and (min-width: map-get($grid-breakpoints, "xl"))
+    &-container
+      flex: 0 1 100px
+      padding: $m-base
+
+    &-content
+      text-transform: uppercase
+      letter-spacing: 1.5px
+
+    &-image
+      flex-grow: 1
+      display: flex
+      height: 150px
+
+      & > img
+        object-fit: cover
+
+    &-expanded
+      display: none
+      color: $color-white
+      position: absolute
+      bottom: 0
+      padding: $m-xl $m-3xl $m-xl $m-xl
+      font-size: $font-size-lg
+      z-index: $z-middle
+
+      img
+        margin-bottom: $m-base
+
+    &-separator
+      border-bottom: solid $color-gray-darker 1px
+      width: 80px
+      margin: $m-sm 0
+
+    &-title
+      font-size: $font-size-lg
+      color: $color-black
+      font-weight: $font-weight-bold
+
++media-breakpoint-up(xl)
+  .experience
+    padding: $m-3xl
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+    div:nth-child(1)
+      grid-row-start: 1
+      grid-row-end: 3
+
+    &__separator
+      height: $m-sm
+      width: 60px
+
+    &__header
+      &-main
+        font-size: $font-size-2xl
+        word-spacing: 100vw
+
+      &-muted
+        padding: 0 $m-2xl $m-md 0
+
+    &__card
+      margin: $m-sm
+
+      &-image
+        height: 250px
+
       &:nth-child(3)
         position: relative
         top: $m-base
@@ -94,44 +140,3 @@
             left: 0
             background: linear-gradient(45deg, $brand-primary, $color-white)
             opacity: .75
-
-
-    &-container
-      flex: 0 1 100px
-      padding: $m-base
-
-    &-content
-      text-transform: uppercase
-      letter-spacing: 1.5px
-
-    &-image
-      flex-grow: 1
-      display: flex
-      height: 250px
-      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-        height: 150px
-
-      & > img
-        object-fit: cover
-
-    &-expanded
-      display: none
-      color: $color-white
-      position: absolute
-      bottom: 0
-      padding: $m-xl $m-3xl $m-xl $m-xl
-      font-size: $font-size-lg
-      z-index: $z-middle
-
-      img
-        margin-bottom: $m-base
-
-    &-separator
-      border-bottom: solid $color-gray-darker 1px
-      width: 80px
-      margin: $m-sm 0
-
-    &-title
-      font-size: $font-size-lg
-      color: $color-black
-      font-weight: $font-weight-bold

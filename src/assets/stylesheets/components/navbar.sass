@@ -5,9 +5,7 @@
   right: 0
   display: flex
   justify-content: flex-end
-  padding: $m-lg
-  @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-    padding: $m-md
+  padding: $m-md
 
   &__section
     display: flex
@@ -15,10 +13,6 @@
 
     &.-main
       flex-grow: 1
-
-    &.-desktop-only
-      @media screen and (max-width: map-get($grid-breakpoints, "xl"))
-        display: none
 
   &__logo-text
     margin-left: $m-sm
@@ -53,3 +47,14 @@
     &.-primary
       border: 2px solid $color-light-transparent
       border-radius: $border-radius-md
+
++media-breakpoint-up(xl)
+  .navbar
+    padding: $m-lg
+
+
++media-breakpoint-down(xs)
+  .navbar
+    &__section
+      &.-desktop-only
+        display: none
