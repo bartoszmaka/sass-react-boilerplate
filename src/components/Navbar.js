@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import logo from './Icons/Brand.svg'
-import hamburger from './Icons/Hamburger.svg'
+import { ReactComponent as Brand } from './Icons/Brand.svg'
+import { ReactComponent as Hamburger } from './Icons/Hamburger.svg'
 
 export const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false)
@@ -9,8 +9,8 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__section -main">
-        <img className="navbar__logo-icon" src={logo} alt='logo' />
-        <span className="navbar__logo-text">Zabdos</span>
+        <Brand className="navbar__icon" />
+        <span className="navbar__brand-name">Zabdos</span>
       </div>
       <div className="navbar__section -desktop-only">
         <button className="navbar__item -btn" type="button">Flight Status</button>
@@ -19,7 +19,7 @@ export const Navbar = () => {
       </div>
       <div className="navbar__section">
         <button className="navbar__item" onClick={() => setMenuVisible(!menuVisible)}>
-          <img src={hamburger} alt="navbar collapse" />
+          <Hamburger className="navbar__icon" />
         </button>
       </div>
     </nav>
