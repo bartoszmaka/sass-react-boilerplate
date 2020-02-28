@@ -23,29 +23,33 @@ const Experience = () => {
 
   return (
     <div className="experience">
-      <div className="experience__header">
-        <div className="experience__separator" />
-        <h2 className="experience__header-main">The Zadbos Experience</h2>
-        <p className="experience__header-muted">Whether it's your first flight or simply your latest, we work to anticipate your every need</p>
-        <div className="experience__header-video">
-          <img src={Play} alt="" />
-          <span>Watch the full video now</span>
-        </div>
+      <div className="description">
+        <h2 className="header">The Zadbos Experience</h2>
+        <p className="description__text">
+          Whether it's your first flight or simply your latest, we work to anticipate your every need
+        </p>
+        <button className="description__video-container">
+          <img className="description__icon" src={Play} alt="" />
+          <span>
+            Watch the full video now
+          </span>
+        </button>
       </div>
 
       {cards.map(({ muted, text, image, expanded }, index) => (
-        <div className="experience__card" key={index}>
-          <div className="experience__card-image">
-            <img src={image} alt="" />
-            <div className="experience__card-expanded">
-              <img src={Play} alt="" />
-              <span>{expanded}</span>
-            </div>
+        <div className="card" key={index}>
+          <div className="card__image-container">
+            <img className="card__image" src={image} alt="" />
+            { expanded && (
+              <div className="card__expanded">
+                <img className="card__icon" src={Play} alt="" />
+                <span>{expanded}</span>
+              </div>
+            )}
           </div>
-          <div className="experience__card-container">
-            <p className="experience__card-content">{muted}</p>
-            <div className="experience__card-separator"/>
-            <p className="experience__card-title">{text}</p>
+          <div className="card__description">
+            <p className="card__content">{muted}</p>
+            <p className="card__title">{text}</p>
           </div>
         </div>
       ))}

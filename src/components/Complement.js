@@ -17,17 +17,16 @@ const Complement = () => {
   ]
   return (
     <div className="complement">
-      <div className="complement__separator" />
-      <h3 className="complement__header">Complement Your Journey</h3>
+      <h3 className="header">Complement Your Journey</h3>
       <p className="complement__subheader">Explore the additional services we offer to make your journey even more memorable.</p>
 
-      <div className="complement__circle-container">
+      <div className="complement__circles-container">
         {circles.map(({ icon, text }, index) => (
-          <div className="complement__circle-item" key={index}>
-            <div className="complement__circle-icon">
+          <div className="complement-circle__item" key={index}>
+            <div className="complement-circle__icon">
               <img src={icon} alt="" />
             </div>
-            <p className="complement__circle-content">{text}</p>
+            <p className="complement-circle__content">{text}</p>
           </div>
         ))}
       </div>

@@ -10,3 +10,24 @@
   .undefined,
   .className
     animation: bugfinder infinite 1s
+
+.header
+  color: $color-black
+  font-size: $font-size-lg
+
+  &:before
+    display: block
+    content: ''
+    background-color: $brand-primary
+    border-radius: $m-xs
+    height: $m-xs
+    margin: $m-lg auto
+    width: $m-3xl
+
++media-breakpoint-up(xl)
+  .header
+    font-size: $font-size-2xl
+
+    &:before
+      height: $m-sm
+      width: $m-base * 3
