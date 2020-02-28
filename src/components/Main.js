@@ -1,21 +1,21 @@
 import React from 'react';
-import ExpandDown from './Icons/ExpandDown.svg';
-import Plane from './Icons/Plane.svg';
-import ArrowRight from './Icons/ArrowRight.svg';
-import Dot from './Icons/Dot.svg';
+import { ReactComponent as ExpandDown } from './Icons/ExpandDown.svg';
+import { ReactComponent as Plane } from './Icons/Plane.svg';
+import { ReactComponent as ArrowRight } from './Icons/ArrowRight.svg';
+import { ReactComponent as Dot } from './Icons/Dot.svg';
 
 import cn from 'classnames'
 
 const Main = () => {
   return (
     <div className="main">
-      <div className="main__pre-header">
-        <span className="main__pre-header -active">Fly With Us To</span>
-        <div className="main__tab">
+      <div className="tab-bar">
+        <span className="tab-bar__item -active">Fly With Us To</span>
+        <div className="side-cards">
           {['01', '02', '03'].map((content) => (
-            <div key={content} className={cn('main__tab-item', {'-active': content === '01'})}>
+            <div key={content} className={cn('side-cards__item', {'-active': content === '01'})}>
               <span>{content}</span>
-              <img src={Dot} alt=''/>
+              <Dot className="side-cards__icon"/>
             </div>
           ))}
         </div>
@@ -25,39 +25,45 @@ const Main = () => {
 
       <p className="main__description">A new door to paradise for just 15000</p>
 
-      <div className="main__details">
-        <p>Book now till 25 Oct 2019</p>
-        <p>Travel from 25 Oct 2019 to 25 Dec 2019</p>
+      <div className="main__details-container">
+        <p className="main__details">Book now till 25 Oct 2019</p>
+        <p className="main__details">Travel from 25 Oct 2019 to 25 Dec 2019</p>
       </div>
 
-      <button className="main__button">
-        <span className="main__button-content">Let's Go</span>
-        <img src={ArrowRight} alt="" className="main__button-icon"/>
+      <button className="main-btn">
+        <span className="main-btn__content">Let's Go</span>
+        <ArrowRight className="main-btn__icon" />
       </button>
 
-      <div className="main__search">
-        <div className="main__search-icon">
-          <img src={Plane} alt="airplane"/>
+      <form className="search">
+        <div className="search__icon-container">
+          <Plane className="search__icon -transparent" />
         </div>
 
-        <div className="main__search-item">
-          <p>Departure airport</p>
-          <p className="selection">Mumbai (BOM)
-            <img src={ExpandDown} alt="" />
-          </p>
+        <div className="search__section">
+          <label className="search__label">Departure airport</label>
+          <div className="search__dropdown">
+            <span>Mumbai (BOM)</span>
+            <button className="search__dropdown-expand" type="button">
+              <ExpandDown className="search__icon" />
+            </button>
+          </div>
         </div>
 
-        <div className="main__search-item">
-          <p>Arrival airport</p>
-          <p className="selection">Aalborg (AAL)
-            <img src={ExpandDown} alt="" />
-          </p>
+        <div className="search__section">
+          <label className="search__label">Arrival airport</label>
+          <div className="search__dropdown">
+            <span>Aalborg (AAL)</span>
+            <button className="search__dropdown-expand" type="button">
+              <ExpandDown className="search__icon" />
+            </button>
+          </div>
         </div>
 
-        <button className="main__search-button">
+        <button type="button" className="search__button">
           Search
         </button>
-      </div>
+      </form>
     </div>
   )
 }
