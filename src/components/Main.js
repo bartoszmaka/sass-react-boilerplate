@@ -4,24 +4,20 @@ import Plane from './Icons/Plane.svg';
 import ArrowRight from './Icons/ArrowRight.svg';
 import Dot from './Icons/Dot.svg';
 
+import cn from 'classnames'
+
 const Main = () => {
   return (
     <div className="main">
       <div className="main__pre-header">
         <span className="main__pre-header -active">Fly With Us To</span>
         <div className="main__tab">
-          <div className="main__tab-item -active">
-            <span>01</span>
-            <img src={Dot} alt=''/>
-          </div>
-          <div className="main__tab-item">
-            <span>02</span>
-            <img src={Dot} alt=''/>
-          </div>
-          <div className="main__tab-item">
-            <span>03</span>
-            <img src={Dot} alt=''/>
+          {['01', '02', '03'].map((content) => (
+            <div key={content} className={cn('main__tab-item', {'-active': content === '01'})}>
+              <span>{content}</span>
+              <img src={Dot} alt=''/>
             </div>
+          ))}
         </div>
       </div>
 
