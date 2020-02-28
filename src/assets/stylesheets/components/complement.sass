@@ -1,14 +1,14 @@
 .complement
-  padding: $m-sm $m-base
   background-color: $color-gray-lighter
+  padding: $m-sm $m-base
   text-align: center
 
   &__separator
     background-color: $brand-primary
     border-radius: $m-xs
     height: $m-xs
-    width: 80px
     margin: $m-lg auto
+    width: 80px
 
   &__header
     color: $color-black
@@ -25,29 +25,29 @@
       flex-wrap: wrap
 
     &-item
-      display: flex
-      flex-direction: column
       align-items: center
+      display: flex
       flex-basis: 50%
+      flex-direction: column
       margin: $m-lg 0
 
     &-icon
+      align-items: center
       background-color: $color-white
       border-radius: 50%
-      width: 75px
-      height: 75px
-      margin: $m-base
       box-shadow: $color-gray 0 10px 10px 5px
       display: flex
-      align-items: center
+      height: 75px
       justify-content: center
+      margin: $m-base
+      width: 75px
 
       img
         height: 25px
 
     &-content
-      font-size: $font-size-sm
       color: $color-gray-darkest
+      font-size: $font-size-sm
 
 +media-breakpoint-up(xl)
   .complement

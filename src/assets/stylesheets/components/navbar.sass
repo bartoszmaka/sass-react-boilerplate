@@ -1,34 +1,34 @@
 .navbar
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
   display: flex
   justify-content: flex-end
+  left: 0
   padding: $m-md
+  position: absolute
+  right: 0
+  top: 0
 
   &__section
-    display: flex
     align-items: center
+    display: flex
 
     &.-main
       flex-grow: 1
 
   &__logo-text
-    margin-left: $m-sm
     color: $color-white
-    font-weight: $font-weight-bold
     font-size: $font-size-lg
+    font-weight: $font-weight-bold
+    margin-left: $m-sm
 
   &__logo-icon
     height: 40px
 
   &__avatar
     +btn-reset
-    box-sizing: content-box
-    height: 40px
     border-radius: 50%
     border: 3px solid $color-light-transparent
+    box-sizing: content-box
+    height: 40px
     margin: 0 0 0 $m-md
 
   &__section
@@ -36,17 +36,17 @@
 
   &__item
     +btn-reset
-    margin: 0 $m-sm
     color: $color-white
-    white-space: nowrap
+    margin: 0 $m-sm
     padding: $m-sm
+    white-space: nowrap
 
     &.-btn
       min-width: 130px
 
     &.-primary
-      border: 2px solid $color-light-transparent
       border-radius: $border-radius-md
+      border: 2px solid $color-light-transparent
 
 +media-breakpoint-up(xl)
   .navbar
