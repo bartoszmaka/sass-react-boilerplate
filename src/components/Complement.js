@@ -1,4 +1,6 @@
 import React from 'react';
+import cn from 'classnames'
+
 import Play from './Icons/Play.svg';
 import ArrowRight from './Icons/ArrowRight.svg';
 import Dot from './Icons/Dot.svg';
@@ -24,8 +26,12 @@ const Complement = () => {
       <section className="complement__circles-container">
         {circles.map(({ icon, text }, index) => (
           <figure className="complement-circle__item" key={index}>
-            <div className="complement-circle__icon">
-              <img src={icon} alt="" />
+            <div className="complement-circle__icon-wrapper">
+              <img
+                className={cn('complement-circle__icon', {'-alternative': index === 0})}
+                src={icon}
+                alt=""
+              />
             </div>
             <figcaption>
               <p className="complement-circle__content">{text}</p>

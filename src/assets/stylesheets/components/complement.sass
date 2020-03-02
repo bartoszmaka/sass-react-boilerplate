@@ -1,3 +1,17 @@
+@keyframes fancyRotate
+  0%
+    border: solid red 3px
+    transform: rotate(0deg)
+  33%
+    border: solid green 3px
+    transform: rotate(120deg)
+  66%
+    border: solid blue 3px
+    transform: rotate(240deg)
+  100%
+    border: solid red 3px
+    transform: rotate(360deg)
+
 .complement
   background-color: $color-gray-lighter
   padding: $m-sm $m-base
@@ -20,7 +34,7 @@
       flex-direction: column
       margin: $m-lg 0
 
-    &__icon
+    &__icon-wrapper
       align-items: center
       background-color: $color-white
       border-radius: 50%
@@ -31,8 +45,13 @@
       margin: $m-base
       width: 75px
 
-      img
-        height: 25px
+    &__icon
+      height: 25px
+
+      &.-alternative
+        height: $m-base * 2
+        border: solid pink 2px
+        animation: fancyRotate 3s linear infinite
 
     &__content
       color: $color-gray-darkest
