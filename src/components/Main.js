@@ -15,7 +15,8 @@ const Main = () => {
           {['01', '02', '03'].map((content) => (
             <div key={content} className={cn('side-cards__item', {'-active': content === '01'})}>
               <span>{content}</span>
-              <Dot className="side-cards__icon"/>
+              <img src="" alt="" className="side-cards__icon -dot" />
+              {/* <Dot className="side-cards__icon"/> */}
             </div>
           ))}
         </section>
