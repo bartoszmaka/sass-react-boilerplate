@@ -52,11 +52,11 @@
       padding: $m-sm $m-lg
 
     &__icon
-      height: $m-base * 2
-      width: $m-base * 2
       background-color: $color-white
       color: $brand-primary
+      height: $m-base * 2
       padding: $m-sm
+      width: $m-base * 2
 
   .search
     color: $color-black
@@ -75,13 +75,13 @@
 
       &.-transparent
         height: $m-lg
-        width: $m-lg
         margin: auto
         opacity: .4
+        width: $m-lg
 
     &__label
-      margin-bottom: $m-sm
       display: block
+      margin-bottom: $m-sm
 
     &__section
       background-color: $color-white
@@ -95,11 +95,11 @@
       +btn-reset
 
     &__dropdown
+      align-self: center
       color: $color-black
+      display: flex
       font-size: $font-size-base
       font-weight: $font-weight-bold
-      display: flex
-      align-self: center
 
     &__button
       background-color: $brand-primary
@@ -117,7 +117,6 @@
     padding: $m-base * 7 $m-3xl $m-3xl $m-3xl
 
     .side-cards
-      $cards: &
       display: flex
       justify-content: space-between
       position: absolute
@@ -126,8 +125,8 @@
       width: $m-base * 8
 
       &__icon
-        width: 5px
         height: 5px
+        width: 5px
 
         &.-dot
           background-image: url('../../assets/images/icons/dot.svg')
