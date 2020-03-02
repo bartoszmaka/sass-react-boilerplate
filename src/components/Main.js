@@ -8,27 +8,26 @@ import cn from 'classnames'
 
 const Main = () => {
   return (
-    <div className="main">
-      <div className="tab-bar">
+    <article className="main">
+      <section className="tab-bar">
         <span className="tab-bar__item -active">Fly With Us To</span>
-        <div className="side-cards">
+        <section className="side-cards">
           {['01', '02', '03'].map((content) => (
             <div key={content} className={cn('side-cards__item', {'-active': content === '01'})}>
               <span>{content}</span>
               <Dot className="side-cards__icon"/>
             </div>
           ))}
-        </div>
-      </div>
+        </section>
+      </section>
 
       <h2 className="main__header">Bangkok</h2>
-
       <p className="main__description">A new door to paradise for just 15000</p>
 
-      <div className="main__details-container">
+      <section className="main__details-container">
         <p className="main__details">Book now till 25 Oct 2019</p>
         <p className="main__details">Travel from 25 Oct 2019 to 25 Dec 2019</p>
-      </div>
+      </section>
 
       <button className="main-btn">
         <span className="main-btn__content">Let's Go</span>
@@ -64,7 +63,7 @@ const Main = () => {
           Search
         </button>
       </form>
-    </div>
+    </article>
   )
 }
 

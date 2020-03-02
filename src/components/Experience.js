@@ -22,8 +22,8 @@ const Experience = () => {
   ]
 
   return (
-    <div className="experience">
-      <div className="description">
+    <article className="experience">
+      <section className="description">
         <h2 className="header">The Zadbos Experience</h2>
         <p className="description__text">
           Whether it's your first flight or simply your latest, we work to anticipate your every need
@@ -34,10 +34,10 @@ const Experience = () => {
             Watch the full video now
           </span>
         </button>
-      </div>
+      </section>
 
       {cards.map(({ muted, text, image, expanded }, index) => (
-        <div className="card" key={index}>
+        <figure className="card" key={index}>
           <div className="card__image-container">
             <img className="card__image" src={image} alt="" />
             { expanded && (
@@ -47,13 +47,13 @@ const Experience = () => {
               </div>
             )}
           </div>
-          <div className="card__description">
+          <figkaption className="card__description">
             <p className="card__content">{muted}</p>
             <p className="card__title">{text}</p>
-          </div>
-        </div>
+          </figkaption>
+        </figure>
       ))}
-    </div>
+    </article>
   )
 }
 

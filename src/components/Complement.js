@@ -15,22 +15,25 @@ const Complement = () => {
     { icon: Hamburger, text: 'Al Maha Services' },
     { icon: Brand, text: 'Car Rentals' },
   ]
+
   return (
-    <div className="complement">
+    <article className="complement">
       <h3 className="header">Complement Your Journey</h3>
       <p className="complement__subheader">Explore the additional services we offer to make your journey even more memorable.</p>
 
-      <div className="complement__circles-container">
+      <section className="complement__circles-container">
         {circles.map(({ icon, text }, index) => (
-          <div className="complement-circle__item" key={index}>
+          <figure className="complement-circle__item" key={index}>
             <div className="complement-circle__icon">
               <img src={icon} alt="" />
             </div>
-            <p className="complement-circle__content">{text}</p>
-          </div>
+            <figcaption>
+              <p className="complement-circle__content">{text}</p>
+            </figcaption>
+          </figure>
         ))}
-      </div>
-    </div>
+      </section>
+    </article>
   )
 }
 
