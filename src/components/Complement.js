@@ -25,7 +25,7 @@ const Complement = () => {
 
       <section className="complement__circles-container">
         {circles.map(({ icon, text }, index) => (
-          <figure className="complement-circle__item" key={index}>
+          <figure className="complement-circle" key={index}>
             <div className="complement-circle__icon-wrapper">
               <img
                 className={cn('complement-circle__icon', {'-alternative': index === 0})}

@@ -47,10 +47,10 @@ const Experience = () => {
               </div>
             )}
           </div>
-          <figkaption className="card__description">
+          <figcaption className="card__description">
             <p className="card__content">{muted}</p>
             <p className="card__title">{text}</p>
-          </figkaption>
+          </figcaption>
         </figure>
       ))}
     </article>

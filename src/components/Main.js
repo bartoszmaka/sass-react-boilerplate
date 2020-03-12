@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <article className="main">
       <section className="tab-bar">
-        <span className="tab-bar__item -active">Fly With Us To</span>
+        <span className="tab-bar__item">Fly With Us To</span>
         <section className="side-cards">
           {['01', '02', '03'].map((content) => (
             <div key={content} className={cn('side-cards__item', {'-active': content === '01'})}>

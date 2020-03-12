@@ -26,36 +26,34 @@
     display: flex
     flex-wrap: wrap
 
-  .complement-circle
-    &__item
-      align-items: center
-      display: flex
-      flex-basis: 50%
-      flex-direction: column
-      margin: $m-lg 0
+.complement-circle
+  align-items: center
+  display: flex
+  flex-basis: 50%
+  flex-direction: column
+  margin: $m-lg 0
 
-    &__icon-wrapper
-      align-items: center
-      background-color: $color-white
-      border-radius: 50%
-      box-shadow: $color-gray 0 10px 10px 5px
-      display: flex
-      height: 75px
-      justify-content: center
-      margin: $m-base
-      width: 75px
+  &__icon-wrapper
+    align-items: center
+    background-color: $color-white
+    border-radius: 50%
+    box-shadow: $color-gray 0 10px 10px 5px
+    display: flex
+    height: 75px
+    justify-content: center
+    margin: $m-base
+    width: 75px
 
-    &__icon
-      height: 25px
+  &__icon
+    height: 25px
 
-      &.-alternative
-        animation: fancyRotate 3s linear infinite
-        border: solid pink 2px
-        height: $m-base * 2
+    &.-alternative
+      animation: fancyRotate 3s linear infinite
+      height: $m-base * 2
 
-    &__content
-      color: $color-gray-darkest
-      font-size: $font-size-sm
+  &__content
+    color: $color-gray-darkest
+    font-size: $font-size-sm
 
 +media-breakpoint-up(xl)
   .complement
@@ -65,6 +63,5 @@
       font-size: $font-size-lg
       padding: 0 30%
 
-    .complement-circle
-      &__item
-        flex-basis: 33%
+  .complement-circle
+    flex-basis: 33%
