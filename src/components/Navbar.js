@@ -12,7 +12,7 @@ export const Navbar = () => {
         <Brand className="navbar__icon" />
         <span className="navbar__brand-name">Zabdos</span>
       </div>
-      <div className="navbar__section -desktop-only">
+      <div className="navbar__section -desktop-flex">
         <button className="navbar__item -btn" type="button">Flight Status</button>
         <button className="navbar__item -btn -primary" type="button">Check In</button>
         <img className="navbar__avatar" src="https://i.pravatar.cc/200" alt="avatar" />

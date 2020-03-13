@@ -14,6 +14,9 @@
     &.-main
       flex-grow: 1
 
+    &.-desktop-flex
+      display: none
+
   &__brand-name
     color: $color-white
     font-size: $font-size-lg
@@ -31,9 +34,6 @@
     box-sizing: content-box
     height: $m-base * 2
     margin: 0 0 0 $m-md
-
-  &__section
-    display: flex
 
   &__item
     +btn-reset
@@ -53,9 +53,6 @@
   .navbar
     padding: $m-lg
 
-
-+media-breakpoint-down(xs)
-  .navbar
     &__section
-      &.-desktop-only
-        display: none
+      &.-desktop-flex
+        display: flex

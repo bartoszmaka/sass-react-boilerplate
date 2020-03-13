@@ -2,7 +2,6 @@ import React from 'react';
 import { ReactComponent as ExpandDown } from './Icons/ExpandDown.svg';
 import { ReactComponent as Plane } from './Icons/Plane.svg';
 import { ReactComponent as ArrowRight } from './Icons/ArrowRight.svg';
-import { ReactComponent as Dot } from './Icons/Dot.svg';
 
 import cn from 'classnames'
 
@@ -15,8 +14,6 @@ const Main = () => {
           {['01', '02', '03'].map((content) => (
             <div key={content} className={cn('side-cards__item', {'-active': content === '01'})}>
               <span>{content}</span>
-              <img src="" alt="" className="side-cards__icon -dot" />
-              {/* <Dot className="side-cards__icon"/> */}
             </div>
           ))}
         </section>

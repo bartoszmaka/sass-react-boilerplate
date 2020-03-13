@@ -51,7 +51,7 @@
 
   &__icon
     background-color: $color-white
-    color: $brand-primary
+    fill: $brand-primary
     height: $m-base * 2
     padding: $m-sm
     width: $m-base * 2
@@ -143,14 +143,6 @@
     top: 100%
     width: $m-base * 8
 
-    &__icon
-      height: 5px
-      width: 5px
-
-      &.-dot
-        background-image: url('../../assets/images/icons/dot.svg')
-        background-size: cover
-
     &__item
       align-items: center
       background-color: $color-white
@@ -168,6 +160,14 @@
       position: relative
 
       &:after
+        content: ''
+        height: 5px
+        width: 5px
+        border-radius: 50%
+        background-color: $color-black
+        box-shadow: $brand-primary 0 3px 5px 0
+
+      &:before
         background-color: $color-black
         bottom: 0
         content: ''
@@ -182,13 +182,10 @@
         color: $color-black
         opacity: .6
 
-        &:after
+        &:before
           background-color: $brand-primary
           bottom: 100%
           left: 0
           opacity: 1
           right: 33%
           top: -$border-size-base
-
-  .side-cards__icon
-    box-shadow: $brand-primary 0 3px 5px 0
