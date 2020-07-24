@@ -39,22 +39,18 @@ const Main = () => {
 
         <div className="search__section">
           <label className="search__label">Departure airport</label>
-          <div className="search__dropdown">
+          <button className="search__dropdown" type="button">
             <span>Mumbai (BOM)</span>
-            <button className="search__dropdown-expand" type="button">
-              <ExpandDown className="search__icon" />
-            </button>
-          </div>
+            <ExpandDown className="search__icon" />
+          </button>
         </div>
 
         <div className="search__section">
           <label className="search__label">Arrival airport</label>
-          <div className="search__dropdown">
+          <button className="search__dropdown" type="button">
             <span>Aalborg (AAL)</span>
-            <button className="search__dropdown-expand" type="button">
-              <ExpandDown className="search__icon" />
-            </button>
-          </div>
+            <ExpandDown className="search__icon" />
+          </button>
         </div>
 
         <button type="button" className="search__button">

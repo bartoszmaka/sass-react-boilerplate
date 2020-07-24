@@ -2,9 +2,9 @@
   background-image: linear-gradient($color-white, $color-gray-lighter)
   padding: $m-3xl $m-base
 
-.header
-  &:before
-    margin-left: $m-lg
+  .header
+    &:before
+      margin-left: $m-lg
 
 .description
   color: $color-gray-darker
@@ -84,12 +84,15 @@
     grid-template-columns: repeat(3, 1fr)
     padding: $m-3xl
 
+    .header
+      word-spacing: 100vw
+
   .description
     grid-row-end: 3
     grid-row-start: 1
 
-  .header
-    word-spacing: 100vw
+  .card__expanded
+    display: block
 
   .card
     margin: $m-sm
@@ -108,14 +111,11 @@
       grid-row: 1 / 3
       z-index: $z-low
 
-      .card__expanded
-        display: block
-
       .card__image-container
         position: relative
 
         &:after
-          background: linear-gradient(45deg, $brand-primary, $color-white)
+          background-image: linear-gradient(45deg, $brand-primary, $color-white)
           bottom: 0
           content: ''
           left: 0

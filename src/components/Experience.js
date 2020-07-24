@@ -30,9 +30,7 @@ const Experience = () => {
         </p>
         <button className="description__video-container">
           <img className="description__icon" src={Play} alt="" />
-          <span>
-            Watch the full video now
-          </span>
+          Watch the full video now
         </button>
       </section>
 
